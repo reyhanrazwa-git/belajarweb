@@ -1,23 +1,35 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    padding-top: 80px;
 }
 
-.navbar {
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
     padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .nav-logo {
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 24px;
     font-weight: bold;
 }
@@ -25,155 +37,243 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
+}
+
+.nav-links li {
+    margin-left: 10px;
 }
 
 .nav-links li a {
-    color: #fff;
+    color: #ffff;
     text-decoration: none;
     font-size: 16px;
     transition: 0.3s;
 }
 
 .nav-links li a:hover {
-    color: black;
-} */
-
-
-/* style.css */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    color: #4190ff;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
+.btn-auth {
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0) !important;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+.btn-auth:hover {
+    background-color: #677380;
 }
 
-/* Navbar */
-.navbar {
-  background: #111;
-  color: #fff;
-  padding: 1rem 0;
-}
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.navbar nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
+.btn-signup {
+    background-color: #28a745;
 }
 
-/* Hero */
+.btn-signup:hover {
+    background-color: #1e7e34;
+}
+
+/* Section*/
+
 .hero {
-  background: url('hero-car.jpg') no-repeat center center/cover;
-  color: rgb(4, 2, 2);
-  text-align: center;
-  padding: 100px 20px;
-}
-.hero h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    background-color: #f9f9f9;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.btn {
-  display: inline-block;
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: #111;
+    padding: 40px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.button-explore {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-explore:hover {
+    background-color: orangered;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* body 
+container card list */
+
+.container-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: rgb(202, 202, 202);
+}
+
+.card-car {
+    width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #ffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-car:hover {
+    transform: translateY(-3px);
+}
+
+.card-car img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.car-details {
+    padding: 10px;
+}
+
+.car-details h3 {
+    font-size: 1.2rem;
+    margin: 0 0 5px;
+}
+
+.car-details p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* button details car */
+.button-ex {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  border-radius: 6px;
   padding: 10px 20px;
-  background: #111;
-  color: #fff;
+  text-align: center;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.button-ex a {
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.3s;
 }
 
-/* Inventory */
-.inventory {
-  padding: 50px 0;
-  background: #fff;
-}
-.inventory h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.car-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-.car-card {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-.car-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px;
+/* Hover efek menyatu */
+.button-ex:hover {
+  background-color: #000000;
 }
 
-/* About */
-.about {
-  padding: 50px 0;
-  background: #eaeaea;
-}
-.about h2, .contact h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.about p {
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
+.button-ex:hover a {
+  color: #ffffff; /* Tetap putih, tidak berubah sendiri */
 }
 
-/* Contact */
-.contact {
-  padding: 50px 0;
-  background: #fff;
-}
-.contact form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.contact input, .contact select, .contact button {
-  padding: 10px;
-  font-size: 1rem;
-}
-.contact button {
-  background: #111;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+/* lihat lainnya button */
+
+.lihat-lainnya-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
 
-/* Footer */
+.lihat-lainnya-btn:hover {
+    background-color: #444;
+}
+
+/* footer */
+
 .footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 50px;
+    background-color: #111;
+    color: #eee;
+    padding: 40px 20px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-about,
+.footer-contact {
+    flex: 1 1 250px;
+
+}
+
+.footer h3.footer h4 {
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer p, .footer li {
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #00bcd4;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    font-size: 13px;
 }
