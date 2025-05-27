@@ -1,0 +1,21 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.all-container {
+    background-color: black;
+    color: white;
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;   
+    align-items: center; 
+    height: 100vh;
+}
+
+.all-container h1 {
+    color: white;
+    font-size: 48px;
+    font-family: Arial, sans-serif;
+}
